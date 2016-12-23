@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<!-- Easy template file --> 
 <html>
   <head>
-    <meta charset="utf-8"> <title>Isomorphic React</title>
+    <meta charset="utf-8">
+    <title>Isomorphic React</title>
   </head>
   <body>
+    <!-- Where our React component goes -->
     <div id="root"><%- content %></div>
+
+    <!-- Dumping initial view data -->
+    <script id="initial-data" type="application/json">
+      <%- reactInitialData %>
+    </script>
+
+    <!-- Import bundle.js, compiled version of our JSX -->
+    <script type="text/JavaScript" src="bundle.js"></script>
+
   </body>
 </html>

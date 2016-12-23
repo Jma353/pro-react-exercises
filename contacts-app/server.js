@@ -24,6 +24,7 @@ app.get('/', (request, response) => {
   /* Create the component & serve it to the template as string */
   let componentInstance = ContactsAppFactory ({ initialData : contacts });
   response.render ('index', {
+    reactInitialData: JSON.stringify(contacts), // dumped to a <script> tag 
     content: renderToString (componentInstance)
   });
 });
