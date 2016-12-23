@@ -1,6 +1,6 @@
 # Guide
 
-This represents a simple "Hello world!" application with Babel configuration.  As a note, Babel is ECMAScript 6 to ECMAScript 5 transpiler, allowing one to utilize all ECMAScript 6 features in a Node.js environment, and have them run on any browser.  
+This represents a complete example involving server-side rendering of React.js.
 
 ## Setting Up
 
@@ -14,7 +14,8 @@ Install the following locally (a.k.a. with the `--save` flag)
 
 ```
 npm install --save express
-npm install --save babel-core babel-preset-es2015
+npm install --save express ejs react react-dom
+npm install --save webpack babel-core babel-loader babel-preset-es2015 babel-preset-react
 ```
 
 Install the following globally (a.k.a. with the `--global` flag) for compiling files from the command line:
