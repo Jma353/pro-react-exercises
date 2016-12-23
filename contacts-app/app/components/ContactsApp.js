@@ -9,7 +9,7 @@ class ContactsApp extends Component {
   constructor () {
     super (...arguments);
     this.state = {
-      contacts: this.props.initalData || [],
+      contacts: this.props.initialData || [],
       filterText: ''
     }
   }
@@ -40,4 +40,4 @@ ContactsApp.propTypes = {
 }
 
 /* Export the component */
-export default ContactsApp; 
+export default ContactsApp;
