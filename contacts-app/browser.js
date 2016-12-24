@@ -1,12 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import ContactsApp from './app/components/ContactsApp';
+import createBrowserHistory from 'react-router/node_modules/history/lib/createBrowserHistory'; 
+import { Router } from 'react-router';
+import routes from './app/routes';
 
-/* Grab the data from the tag */
-let initialData = document.getElementById ('initial-data').textContent;
-if (initialData.length > 0) {
-  initialData = JSON.parse (initialData);
-}
+/* History */
+const history = createBrowserHistory()
 
-/* Render our top-level component */
-render (<ContactsApp initialData={initialData} />, document.getElementById ('root'));
+/* Render the router */
+render (
+  <Router history={history} routes={routes} />,
+  document.getElementById ('root')
+);

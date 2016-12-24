@@ -16,13 +16,15 @@ Install the following locally (a.k.a. with the `--save` flag)
 npm install --save express
 npm install --save express ejs react react-dom
 npm install --save webpack babel-core babel-loader babel-preset-es2015 babel-preset-react
+npm install --save react-router 
+npm install --save isomorphic-fetch
 ```
 
 Install the following globally (a.k.a. with the `--global` flag) for compiling files from the command line & for setting up React client-side JavaScript packing:
 
 ```
 npm install --global babel-cli
-npm install --global webpack 
+npm install --global webpack
 ```
 
 Make a `.babelrc` configuration file with the following content:
@@ -68,4 +70,4 @@ This line allows us to run the applicaton via `npm start`.
 
 ## Content
 
-The content of this configuration can be seen by viewing `server.js`
+The content of this configuration can be seen by viewing the various JavaScript files of the project.  

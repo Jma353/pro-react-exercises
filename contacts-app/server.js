@@ -15,7 +15,6 @@ app.use (express.static(__dirname + '/public'));
 /* Static data (read in synchronously )*/
 const contacts = JSON.parse (fs.readFileSync (__dirname + '/public/contacts.json', 'utf8'));
 
-
 /* Factory for our top-level react component */
 const ContactsAppFactory = React.createFactory (ContactsApp);
 
@@ -24,7 +23,7 @@ app.get('/', (request, response) => {
   /* Create the component & serve it to the template as string */
   let componentInstance = ContactsAppFactory ({ initialData : contacts });
   response.render ('index', {
-    reactInitialData: JSON.stringify(contacts), // dumped to a <script> tag 
+    reactInitialData: JSON.stringify(contacts), // dumped to a <script> tag
     content: renderToString (componentInstance)
   });
 });
